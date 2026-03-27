@@ -254,3 +254,12 @@ cd voice-teach
    - 实时录音：点击「录音」按钮，录制完成后自动上传
 3. 配置参数：选择 AI 模型类型、处理精度、输出格式等
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=HanphoneJan%2FVoiceTeach&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=HanphoneJan/VoiceTeach&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=HanphoneJan/VoiceTeach&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=HanphoneJan/VoiceTeach&type=date&legend=top-left" />
+ </picture>
+</a>
