@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="speed_options">
+        <item>正常</item>
+        <item>稍快</item>
+        <item>稍慢</item>
+        <item>快速</item>
+        <item>慢速</item>
+    </string-array>
+</resources>

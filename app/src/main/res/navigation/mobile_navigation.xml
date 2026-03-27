@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home"
+    >
+
+    <fragment
+        android:id="@+id/navigation_bluetooth"
+        android:name="com.yuanchuanshengjiao.voiceteach.ui.bluetooth.BluetoothFragment"
+        android:label="@string/title_bluetooth"
+        tools:layout="@layout/fragment_bluetooth" />
+    <fragment
+        android:id="@+id/navigation_music"
+        android:name="com.yuanchuanshengjiao.voiceteach.ui.music.MusicFragment"
+        android:label="@string/title_music"
+        tools:layout="@layout/fragment_music" />
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.yuanchuanshengjiao.voiceteach.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_upload"
+        android:name="com.yuanchuanshengjiao.voiceteach.ui.upload.UploadFragment"
+        android:label="@string/title_upload"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_files"
+        android:name="com.yuanchuanshengjiao.voiceteach.ui.files.FilesFragment"
+        android:label="@string/title_files"
+        tools:layout="@layout/fragment_files" />
+
+</navigation>
