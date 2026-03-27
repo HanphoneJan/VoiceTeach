@@ -31,6 +31,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 
+import com.yuanchuanshengjiao.voiceteach.BuildConfig;
 import com.yuanchuanshengjiao.voiceteach.files.UriManager;
 import com.yuanchuanshengjiao.voiceteach.message.MessageInfo;
 
@@ -82,7 +83,8 @@ public class HomeViewModel extends ViewModel {
     private static long elapsedTime = 0; // 已录音的时间
     // 复制事件流
     private final MutableLiveData<String> copyEvent = new MutableLiveData<>();
-    private static final String chatUrl="https://www.hanphone.top/aivoice/chat";
+    // API URL 配置（从 BuildConfig 读取）
+    private static final String CHAT_URL = BuildConfig.API_BASE_URL + BuildConfig.API_CHAT_ENDPOINT;
     public LiveData<String> getCopyEvent() {
         return copyEvent;
     }
@@ -318,7 +320,7 @@ public class HomeViewModel extends ViewModel {
                 // 构建完整的请求体
                 RequestBody requestBody = requestBodyBuilder.build();
                 Request request = new Request.Builder()
-                        .url(chatUrl)
+                        .url(CHAT_URL)
                         .post(requestBody)
                         .build();
 

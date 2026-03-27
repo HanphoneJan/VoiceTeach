@@ -13,15 +13,24 @@ android {
         versionCode = 1
         versionName = "1.4"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // API 基础配置
+        buildConfigField("String", "API_BASE_URL", "\"https://hanphone.cn/voice-teach/\"")
+        buildConfigField("String", "API_CHAT_ENDPOINT", "\"chat\"")
+        buildConfigField("String", "API_UPLOAD_ENDPOINT", "\"upload\"")
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "API_BASE_URL", "\"https://hanphone.top/voice-teach/\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "API_BASE_URL", "\"https://hanphone.cn/voice-teach/\"")
         }
     }
     compileOptions {

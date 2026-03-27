@@ -28,6 +28,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.yuanchuanshengjiao.voiceteach.BuildConfig;
 import com.yuanchuanshengjiao.voiceteach.files.UriManager;
 
 
@@ -72,7 +73,8 @@ public class UploadViewModel extends ViewModel {
     // 初始化并启动计时器
     private static long startTime; // 录音开始时间
     private static long elapsedTime = 0; // 已录音的时间
-    private static final String uploadUrl="https://www.hanphone.top/aivoice/upload";
+    // API URL 配置（从 BuildConfig 读取）
+    private static final String UPLOAD_URL = BuildConfig.API_BASE_URL + BuildConfig.API_UPLOAD_ENDPOINT;
     // 添加一个公共的无参构造函数
     public UploadViewModel() {
 
@@ -345,7 +347,7 @@ public class UploadViewModel extends ViewModel {
                 // 构建完整的请求体
                 RequestBody requestBody = requestBodyBuilder.build();
                 Request request = new Request.Builder()
-                        .url(uploadUrl)
+                        .url(UPLOAD_URL)
                         .post(requestBody)
                         .build();
                 new Handler(Looper.getMainLooper()).post(() -> Toast.makeText(context, "开始上传", Toast.LENGTH_LONG).show());
